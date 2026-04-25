@@ -321,7 +321,7 @@ pub fn emergency_cleanup(paks_dir_opt: Option<&str>) {
 // ── Tauri Commands ──
 
 #[tauri::command]
-pub fn check_riot_client(custom_path: String) -> LaunchResult {
+pub async fn check_riot_client(custom_path: String) -> LaunchResult {
     match find_riot_client(&custom_path) {
         Some(path) => LaunchResult {
             success: true,
@@ -335,7 +335,7 @@ pub fn check_riot_client(custom_path: String) -> LaunchResult {
 }
 
 #[tauri::command]
-pub fn check_game_path(game_path: String) -> LaunchResult {
+pub async fn check_game_path(game_path: String) -> LaunchResult {
     if !game_path.is_empty() {
         if let Some(paks) = resolve_paks_dir(&game_path) {
             return LaunchResult {
@@ -548,7 +548,7 @@ pub async fn launch_game(
 }
 
 #[tauri::command]
-pub fn check_game_running() -> bool {
+pub async fn check_game_running() -> bool {
     is_game_running()
 }
 

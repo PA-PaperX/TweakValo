@@ -62,6 +62,6 @@ pub fn detect_gpus() -> GpuInfo {
 }
 
 #[tauri::command]
-pub fn get_gpu_info() -> GpuInfo {
+pub async fn get_gpu_info() -> GpuInfo {
     detect_gpus()
 }

@@ -428,6 +428,16 @@ export default function App() {
     }
   };
 
+  const handleRestoreNvidia = async () => {
+    addLog(t(lang, 'logNvidiaRestoring'));
+    try {
+      const [, msg] = await applyNvidiaProfile("restore");
+      addLog(msg);
+    } catch (error) {
+      addLog(`${t(lang, 'error')}: ${String(error)}`);
+    }
+  };
+
   const handleWelcomeClose = async () => {
     setShowWelcome(false);
     await updateConfigField('welcome_shown', 'true');
@@ -824,12 +834,17 @@ export default function App() {
                       <option value="low">{t(lang, 'presetLow')}</option>
                       <option value="medium">{t(lang, 'presetMedium')}</option>
                       <option value="high">{t(lang, 'presetHigh')}</option>
-                      <option value="valocraft">{t(lang, 'presetCompetitive')}</option>
+                      <option value="dindommum">{t(lang, 'presetCompetitive')}</option>
                     </select>
 
-                    <button className="secondary-button w-full" disabled={isNvidiaDisabled} onClick={handleApplyNvidia}>
-                      {t(lang, 'applyNvidia')}
-                    </button>
+                    <div className="flex flex-col gap-3 sm:flex-row">
+                      <button className="secondary-button flex-1" disabled={isNvidiaDisabled} onClick={handleApplyNvidia}>
+                        {t(lang, 'applyNvidia')}
+                      </button>
+                      <button className="secondary-button sm:min-w-32" disabled={isNvidiaDisabled} onClick={handleRestoreNvidia}>
+                        {t(lang, 'restoreNvidia')}
+                      </button>
+                    </div>
 
                     <div className="rounded-2xl border border-zinc-200/70 bg-zinc-50 p-4">
                       <p className="text-sm leading-6 text-zinc-500">{t(lang, 'nvidiaHint')}</p>

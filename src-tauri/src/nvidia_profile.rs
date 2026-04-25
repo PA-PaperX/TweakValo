@@ -14,7 +14,7 @@ fn lod_preset_value(key: &str) -> Option<u32> {
         "low" => Some(0x00000008),
         "medium" => Some(0x00000010),
         "high" => Some(0x00000018),
-        "valocraft" => Some(0x00000036),
+        "dindommum" => Some(0x00000036),
         _ => None,
     }
 }
@@ -38,9 +38,14 @@ fn get_npi_exe(app_handle: &tauri::AppHandle) -> Option<PathBuf> {
 #[tauri::command]
 pub fn apply_nvidia_profile(app_handle: tauri::AppHandle, lod_key: String) -> (bool, String) {
     let lod_key = lod_key.to_lowercase();
-    let lod_value = match lod_preset_value(&lod_key) {
-        Some(v) => v,
-        None => return (false, format!("Unknown preset: {}", lod_key)),
+    let (aa_val, auto_val, lod_value) = if lod_key == "restore" {
+        // Defaults: AA off, Auto LOD allow, LOD 0
+        (0x00000000, 0x00000001, 0x00000000)
+    } else {
+        match lod_preset_value(&lod_key) {
+            Some(v) => (AA_MODE_REPLAY_ALL, AUTO_LOD_BIAS_OFF, v),
+            None => return (false, format!("Unknown preset: {}", lod_key)),
+        }
     };
 
     let npi_exe = match get_npi_exe(&app_handle) {
@@ -53,8 +58,8 @@ pub fn apply_nvidia_profile(app_handle: tauri::AppHandle, lod_key: String) -> (b
             "-applyExe",
             "VALORANT-Win64-Shipping.exe",
             "Valorant",
-            &format!("0x{:08X}=0x{:08X}", SETTING_AA_TRANSPARENCY_SS, AA_MODE_REPLAY_ALL),
-            &format!("0x{:08X}=0x{:08X}", SETTING_AUTO_LOD_BIAS, AUTO_LOD_BIAS_OFF),
+            &format!("0x{:08X}=0x{:08X}", SETTING_AA_TRANSPARENCY_SS, aa_val),
+            &format!("0x{:08X}=0x{:08X}", SETTING_AUTO_LOD_BIAS, auto_val),
             &format!("0x{:08X}=0x{:08X}", SETTING_LOD_BIAS, lod_value),
         ])
         .creation_flags(0x08000000)
