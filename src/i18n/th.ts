@@ -1,0 +1,138 @@
+export const th = {
+  appName: 'TweakValo',
+  appTag: 'เครื่องมือสำหรับ VALORANT',
+  appSubtitle: 'หน้าจอสำหรับตั้งค่าโฟลเดอร์เกม, True Stretch และโปรไฟล์ NVIDIA ให้ใช้งานง่ายขึ้น',
+  developedBy: 'พัฒนาโดย PaperX',
+  loading: 'กำลังโหลด...',
+
+  safeMode: 'Safe Mode',
+  safeModeDesc: 'การปรับเพื่อเพิ่มประสิทธิภาพ ปลอดภัย 100% ไม่ยุ่งกับไฟล์เกม',
+  advMode: 'Advanced Mode',
+  advModeDesc: 'เสี่ยงโดนแบนจาก Vanguard เพราะมีการแก้ไขไฟล์เกม (รันก่อนเข้าไอดีไก่)',
+  warningTitle: 'ใช้งานด้วยความระมัดระวัง',
+  warningBody: 'ตรวจสอบแต่ละตัวเลือกก่อนกดเล่น แอปนี้สามารถแก้ไขไฟล์ในเครื่องและค่าของ NVIDIA ได้',
+  disclaimer: 'โปรดใช้งานอย่างระมัดระวัง คุณเป็นผู้รับผิดชอบการเปลี่ยนแปลงที่เกิดขึ้นบนเครื่องของคุณขณะใช้เครื่องมือนี้',
+
+  gpuButton: 'โหมด GPU',
+  summaryGame: 'ตำแหน่งเกม',
+  summaryRiot: 'Riot Client',
+  summaryGpu: 'GPU ที่ตรวจพบ',
+  detecting: 'กำลังตรวจสอบ...',
+
+  gameFolderTitle: 'โฟลเดอร์เกม',
+  gameFolderDesc: 'เลือกตำแหน่งติดตั้ง VALORANT ได้ที่นี่ ถ้าใช้ตำแหน่งมาตรฐานอยู่แล้วสามารถปล่อยว่างไว้ได้',
+  gameFolderPlaceholder: 'C:\\Riot Games\\VALORANT',
+  browse: 'เลือก',
+  pathReadyCustom: 'พร้อมใช้งานจากเส้นทางที่กำหนด',
+  pathReadyDefault: 'ตรวจพบเส้นทางมาตรฐานแล้ว',
+  pathMissing: 'ยังไม่พบโฟลเดอร์เกม',
+
+  contentTitle: 'ตัวเลือกเนื้อหา',
+  contentDesc: 'เลือกเฉพาะสิ่งที่ใช้งานจริง',
+  matureContent: 'เนื้อหาสำหรับผู้ใหญ่ (Effect Blood)',
+  matureContentDesc: 'เพิ่มไฟล์ Mature Content กลับเข้าไปก่อนเปิดเกม',
+  riskVeryLow: 'ระดับความเสี่ยง: ต่ำมาก เน้นการเพิ่มหรือคืนไฟล์เท่านั้น ไม่ได้แพตช์ไฟล์เกมหลัก',
+  riskHigh: 'ระดับความเสี่ยง: ต่ำ ไม่ใช่การแพทช์แต่จะเป็นการเอาไฟล์ pak ของเราไปแทนที่ของเกมหลังจากตัวเกมอ่านไฟล์เสร็จเมื่อออกเกมไฟล์เกมที่ backup ไว้ก็จะกลับมาเหมือนเดิม แต่อาจโดนระบบ Vanguard Anti-Cheat แบนผู้ใช้ได้',
+
+  launchTitle: 'เปิดเกม',
+  launchDesc: 'เริ่ม VALORANT ด้วยค่าที่เลือกไว้ด้านบน ถ้าผูกเครื่องมือไว้ ระบบจะรันให้อัตโนมัติก่อนเล่น',
+  play: 'เล่น VALORANT',
+  launching: 'กำลังเปิดเกม...',
+  launchManualBadge: 'กดเล่นอย่างเดียว',
+  stretchLinkedBadge: 'ผูก Stretch กับปุ่มเล่นแล้ว',
+  nvidiaLinkedBadge: 'ผูกโปรไฟล์กราฟิกกับปุ่มเล่นแล้ว',
+  riotClientTitle: 'Riot Client',
+  riotFound: 'พร้อมใช้งาน',
+  riotMissing: 'ต้องตั้งค่าเพิ่ม',
+  riotBrowse: 'เลือกไฟล์',
+
+  stretchTitle: 'True Stretch',
+  stretchDesc: 'เลือกความละเอียดที่ต้องการ แล้วกดใช้งานทันทีหรือผูกไว้กับปุ่มเล่นหลักก็ได้',
+  resolution: 'ความละเอียด',
+  customRes: 'กำหนดเอง',
+  customWidth: 'ความกว้าง',
+  customHeight: 'ความสูง',
+  applyStretch: 'ใช้ Stretch',
+  revertStretch: 'คืนค่า',
+  stretchHint: 'ระบบจะสำรองค่า config ของ VALORANT ให้ก่อนทุกครั้ง เพื่อย้อนกลับได้เร็วเมื่อไม่ต้องการใช้งานต่อ',
+  riskNoneConfig: 'ระดับความเสี่ยง: ไม่มี แก้เฉพาะไฟล์ config ในเครื่องของคุณ',
+
+  nvidiaTitle: 'โปรไฟล์กราฟิก',
+  nvidiaDesc: 'ปรับโปรไฟล์ NVIDIA พร้อมค่า LOD Bias ตามระดับที่ต้องการ',
+  lodPreset: 'ระดับโปรไฟล์',
+  presetLow: 'ต่ำ',
+  presetMedium: 'กลาง',
+  presetHigh: 'สูง',
+  presetCompetitive: 'ดินน้ำมัน',
+  applyNvidia: 'ใช้โปรไฟล์ NVIDIA',
+  nvidiaHint: 'ปรับค่า Transparency Supersampling และ LOD Bias ให้กับโปรไฟล์ของ VALORANT',
+  riskNoneDriver: 'ระดับความเสี่ยง: ไม่มี แก้เฉพาะการตั้งค่าไดรเวอร์ NVIDIA',
+  nvidiaDisabled: 'ส่วนนี้จะใช้งานได้เมื่อเลือกโหมด GPU ที่มี NVIDIA เท่านั้น',
+
+  linkToLaunch: 'ผูกกับปุ่มเล่น',
+  unlinkFromLaunch: 'ยกเลิกการผูก',
+  statusLinked: 'ผูกแล้ว',
+  statusManual: 'ทำแยก',
+
+  logTitle: 'บันทึกการทำงาน',
+  logDesc: 'การทำงานล่าสุดและข้อความจากการเปิดเกมจะแสดงที่นี่',
+  logEmpty: 'ยังไม่มีการทำงาน',
+
+  welcomeEyebrow: 'ยินดีต้อนรับ',
+  welcomeTitle: 'ประกาศ',
+  welcomeBody: 'โปรแกรม TweakValo ถูกสร้างขึ้นมาเพื่อช่วยตั้งค่าความละเอียดหน้าจอแบบ True Stretch ทำให้โมเดลผู้เล่นในเกมขยายกว้างขึ้น และยังสามารถปรับ NVIDIA Profile เพื่อปรับลดคุณภาพกราฟิกให้เกมลื่นไหลและตอบสนองได้ดีที่สุด ทำได้ง่ายๆ จบในหน้าต่างเดียวรับจะไม่รับผิดชอบถ้าเกิดผลกระทบต่อบัญชีของท่านเมื่อท่านกดยอมรับแล้วแต่ทุกอย่างของเมนูเราจะบอกความเสี่ยงต่างๆของการใช้งานไว้ให้เสมอ',
+  welcomeFollow: 'ติดตามช่องทาง',
+  welcomeAcceptRisk: 'ฉันเข้าใจและยอมรับความเสี่ยงที่จะเกิดขึ้นจากการใช้เครื่องมือนี้',
+  welcomeClose: 'เริ่มใช้งาน',
+
+  gpuPickerTitle: 'ตั้งค่าโหมด GPU',
+  gpuPickerSubtitle: 'เลือกโหมดที่ใกล้เคียงกับเครื่องของคุณที่สุด',
+  gpuModeAuto: 'ตรวจจับอัตโนมัติ',
+  gpuModeNvidia: 'NVIDIA เท่านั้น',
+  gpuModeHybrid: 'Hybrid NVIDIA + Intel/AMD',
+  gpuModeNonNvidia: 'Intel/AMD เท่านั้น',
+  gpuPickerNote: 'ระบบจะบันทึกค่าที่เลือกไว้และนำกลับมาใช้ใหม่เมื่อเปิดแอปรอบถัดไป',
+
+  nvidiaTutorialTitle: 'ต้องสร้างความละเอียดแบบกำหนดเองก่อน',
+  nvidiaTutorialSubtitle: 'ยังไม่พบความละเอียด {w}x{h} ในรายการโหมดหน้าจอของเครื่องคุณ',
+  nvidiaTutorialSteps: `ตั้งค่าครั้งเดียวใน NVIDIA Control Panel:
+
+1. เปิด NVIDIA Control Panel
+2. ไปที่ Display > Change resolution
+3. กดปุ่ม Customize
+4. เปิดใช้ตัวเลือก resolutions not exposed by the display
+5. สร้าง Custom Resolution
+6. ตั้ง Horizontal pixels เป็น {w}
+7. ตั้ง Vertical lines เป็น {h}
+8. กด Test แล้วบันทึก
+9. กลับมาที่แอปและกดใช้ Stretch อีกครั้ง`,
+  openNvidiaCp: 'เปิด NVIDIA Control Panel',
+  close: 'ปิด',
+
+  apply: 'บันทึก',
+  cancel: 'ยกเลิก',
+  error: 'ข้อผิดพลาด',
+  startSeq: 'เริ่มกระบวนการเปิดเกม...',
+  done: 'เสร็จสิ้น',
+  logStretchApplying: 'กำลังใช้ค่า Stretch...',
+  logStretchReverting: 'กำลังคืนค่า Stretch...',
+  logNvidiaApplying: 'กำลังใช้โปรไฟล์ NVIDIA...',
+  logStretchLinked: 'ผูก Stretch เข้ากับปุ่มเล่นแล้ว',
+  logStretchUnlinked: 'ยกเลิกการผูก Stretch ออกจากปุ่มเล่นแล้ว',
+  logNvidiaLinked: 'ผูกโปรไฟล์ NVIDIA เข้ากับปุ่มเล่นแล้ว',
+  logNvidiaUnlinked: 'ยกเลิกการผูกโปรไฟล์ NVIDIA ออกจากปุ่มเล่นแล้ว',
+  logGpuSaved: 'บันทึกโหมด GPU แล้ว',
+
+  systemTitle: 'ระบบ & แรม (ISLC)',
+  systemDesc: 'ตั้งค่าการจัดการระบบ Windows อัตโนมัติเพื่อลดความหน่วง (Latency) และอาการเกมกระตุก (Micro-stutter)',
+  timerTitle: 'เปิดใช้ Timer 0.5ms',
+  timerDesc: 'ลดความหน่วงของวินโดว์ ช่วยให้เมาส์และการตอบสนองของเกมไวขึ้น (Timer Resolution)',
+  standbyTitle: 'ล้าง Standby Memory',
+  standbyDesc: 'เคลียร์แรมที่ค้างในระบบโดยอัตโนมัติตอนกดเปิดเกม เพื่อป้องกันเกมกระตุก',
+  priorityTitle: 'ตั้งเกมเป็น High Priority',
+  priorityDesc: 'เร่งความเร็วการประมวลผลให้เกม VALORANT (หลีกเลี่ยงเกมกระตุกเวลาเปิดโปรแกรมอื่นทิ้งไว้)',
+  affinityTitle: 'จัดการ CPU Affinity',
+  affinityDesc: 'บังคับให้เกมไปวิ่งบน Core ที่เหมาะสมเท่านั้น (กันคอร์ 0 ไปชนกับกระบวนการจุกจิกของ Windows)',
+  logSettingTimer: 'กำลังลดค่า Timer Resolution (0.5ms)...',
+  logPurgingMemory: 'กำลังล้าง Standby Memory (แรมแคช)...',
+};
